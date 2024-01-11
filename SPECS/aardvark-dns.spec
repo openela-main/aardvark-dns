@@ -3,9 +3,9 @@
 
 Epoch: 2
 Name: aardvark-dns
-Version: 1.5.0
+Version: 1.7.0
 License: ASL 2.0 and BSD and MIT
-Release: 2%{?dist}
+Release: 1%{?dist}
 ExclusiveArch: %{rust_arches}
 Summary: Authoritative DNS server for A/AAAA container records
 URL: https://github.com/containers/aardvark-dns
@@ -51,6 +51,14 @@ EOF
 %{_libexecdir}/podman/%{name}
 
 %changelog
+* Fri Jul 07 2023 Jindrich Novy <jnovy@redhat.com> - 2:1.7.0-1
+- update to https://github.com/containers/aardvark-dns/releases/tag/v1.7.0
+- Related: #2176063
+
+* Wed Apr 12 2023 Jindrich Novy <jnovy@redhat.com> - 2:1.6.0-1
+- update to https://github.com/containers/aardvark-dns/releases/tag/v1.6.0
+- Related: #2176063
+
 * Fri Feb 03 2023 Jindrich Novy <jnovy@redhat.com> - 2:1.5.0-2
 - build always offline
 - Related: #2124478
