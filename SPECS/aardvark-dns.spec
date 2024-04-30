@@ -3,9 +3,9 @@
 
 Epoch: 2
 Name: aardvark-dns
-Version: 1.9.0
+Version: 1.10.0
 License: ASL 2.0 and BSD and MIT
-Release: 1%{?dist}
+Release: 3%{?dist}
 ExclusiveArch: %{rust_arches}
 Summary: Authoritative DNS server for A/AAAA container records
 URL: https://github.com/containers/aardvark-dns
@@ -51,6 +51,18 @@ EOF
 %{_libexecdir}/podman/%{name}
 
 %changelog
+* Wed Apr 17 2024 Jindrich Novy <jnovy@redhat.com> - 2:1.10.0-3
+- rebuild
+- Resolves: RHEL-33099
+
+* Mon Apr 08 2024 Lokesh Mandvekar <lsm5@redhat.com> - 2:1.10.0-2
+- rebuild for gating tests
+- Related: RHEL-31946
+
+* Wed Jan 24 2024 Jindrich Novy <jnovy@redhat.com> - 2:1.10.0-1
+- update to https://github.com/containers/aardvark-dns/releases/tag/v1.10.0
+- Related: RHEL-2112
+
 * Wed Dec 06 2023 Lokesh Mandvekar <lsm5@redhat.com> - 2:1.9.0-1
 - update to https://github.com/containers/aardvark-dns/releases/tag/v1.9.0
 - Related: Jira:RHEL-2112
