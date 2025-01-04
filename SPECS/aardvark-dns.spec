@@ -3,7 +3,7 @@
 
 Epoch: 2
 Name: aardvark-dns
-Version: 1.12.1
+Version: 1.12.2
 License: ASL 2.0 and BSD and MIT
 Release: 1%{?dist}
 ExclusiveArch: %{rust_arches}
@@ -51,6 +51,10 @@ EOF
 %{_libexecdir}/podman/%{name}
 
 %changelog
+* Wed Sep 04 2024 Jindrich Novy <jnovy@redhat.com> - 2:1.12.2-1
+- update to https://github.com/containers/aardvark-dns/releases/tag/v1.12.2
+- Related: RHEL-27608
+
 * Mon Aug 05 2024 Jindrich Novy <jnovy@redhat.com> - 2:1.12.1-1
 - update to https://github.com/containers/aardvark-dns/releases/tag/v1.12.1
 - Related: RHEL-27608
