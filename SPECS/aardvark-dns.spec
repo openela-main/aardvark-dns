@@ -26,10 +26,10 @@ Epoch: 2
 # If that's what you're reading, Version must be 0, and will be updated by Packit for
 # copr and koji builds.
 # If you're reading this on dist-git, the version is automatically filled in by Packit.
-Version: 1.16.0
+Version: 1.17.0
 # The `AND` needs to be uppercase in the License for SPDX compatibility
 License: Apache-2.0 AND MIT AND Zlib
-Release: 2%{?dist}
+Release: 1%{?dist}
 %if %{defined golang_arches_future}
 ExclusiveArch: %{golang_arches_future}
 %else
@@ -69,7 +69,7 @@ Recommends: bats
 Requires: bind-utils
 Requires: jq
 Requires: netavark
-Requires: nmap-ncat
+Requires: socat
 Requires: dnsmasq
 
 %description tests
@@ -124,6 +124,10 @@ tar fx %{SOURCE1}
 %{_datadir}/%{name}/test
 
 %changelog
+* Tue Feb 03 2026 Jindrich Novy <jnovy@redhat.com> - 2:1.17.0-1
+- update to https://github.com/containers/aardvark-dns/releases/tag/v1.17.0
+- Related: RHEL-122178
+
 * Fri Aug 15 2025 Jindrich Novy <jnovy@redhat.com> - 2:1.16.0-2
 - install BATS if it's not available
 - Related: RHEL-80817
