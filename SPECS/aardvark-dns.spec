@@ -26,7 +26,7 @@ Epoch: 2
 # If that's what you're reading, Version must be 0, and will be updated by Packit for
 # copr and koji builds.
 # If you're reading this on dist-git, the version is automatically filled in by Packit.
-Version: 1.17.0
+Version: 1.17.1
 # The `AND` needs to be uppercase in the License for SPDX compatibility
 License: Apache-2.0 AND MIT AND Zlib
 Release: 1%{?dist}
@@ -124,6 +124,10 @@ tar fx %{SOURCE1}
 %{_datadir}/%{name}/test
 
 %changelog
+* Tue May 05 2026 Jindrich Novy <jnovy@redhat.com> - 2:1.17.1-1
+- update to https://github.com/containers/aardvark-dns/releases/tag/v1.17.1
+- Resolves: RHEL-170152
+
 * Fri Nov 14 2025 Jindrich Novy <jnovy@redhat.com> - 2:1.17.0-1
 - update to https://github.com/containers/aardvark-dns/releases/tag/v1.17.0
 - Resolves: RHEL-85839
