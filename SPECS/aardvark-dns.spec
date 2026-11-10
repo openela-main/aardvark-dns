@@ -18,7 +18,7 @@ Name: aardvark-dns
 %if %{defined copr_username}
 Epoch: 102
 %else
-Epoch: 2
+Epoch: 4
 %endif
 # DO NOT TOUCH the Version string!
 # The TRUE source of this specfile is:
@@ -26,7 +26,7 @@ Epoch: 2
 # If that's what you're reading, Version must be 0, and will be updated by Packit for
 # copr and koji builds.
 # If you're reading this on dist-git, the version is automatically filled in by Packit.
-Version: 1.17.1
+Version: 2.1.0
 # The `AND` needs to be uppercase in the License for SPDX compatibility
 License: Apache-2.0 AND MIT AND Zlib
 Release: 1%{?dist}
@@ -124,9 +124,16 @@ tar fx %{SOURCE1}
 %{_datadir}/%{name}/test
 
 %changelog
-* Mon May 05 2026 Jindrich Novy <jnovy@redhat.com> - 2:1.17.1-1
-- update to https://github.com/containers/aardvark-dns/releases/tag/v1.17.1
-- Resolves: RHEL-170143
+* Thu Aug 13 2026 Jindrich Novy <jnovy@redhat.com> - 4:2.1.0-1
+- update to https://github.com/containers/aardvark-dns/releases/tag/v2.1.0
+- Resolves: RHEL-187026
+
+* Wed Jul 22 2026 Jindrich Novy <jnovy@redhat.com> - 4:2.0.0-2
+- increase Epoch to preserve upgrade path from RHEL9 - Resolves: RHEL-213576
+
+* Tue Jun 23 2026 Jindrich Novy <jnovy@redhat.com> - 2:2.0.0-1
+- update to the latest upstream release
+- Resolves: RHEL-187026
 
 * Tue Feb 03 2026 Jindrich Novy <jnovy@redhat.com> - 2:1.17.0-1
 - update to https://github.com/containers/aardvark-dns/releases/tag/v1.17.0
