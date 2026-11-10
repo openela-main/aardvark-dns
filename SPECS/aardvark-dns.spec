@@ -18,7 +18,7 @@ Name: aardvark-dns
 %if %{defined copr_username}
 Epoch: 102
 %else
-Epoch: 2
+Epoch: 3
 %endif
 # DO NOT TOUCH the Version string!
 # The TRUE source of this specfile is:
@@ -124,9 +124,14 @@ tar fx %{SOURCE1}
 %{_datadir}/%{name}/test
 
 %changelog
-* Tue May 05 2026 Jindrich Novy <jnovy@redhat.com> - 2:1.17.1-1
-- update to https://github.com/containers/aardvark-dns/releases/tag/v1.17.1
-- Resolves: RHEL-170152
+* Wed Jul 22 2026 Jindrich Novy <jnovy@redhat.com> - 3:1.17.1-1
+- rollback to 1.17.1 increasing Epoch to 3
+- Resolves: RHEL-187027
+
+* Tue Jun 23 2026 Jindrich Novy <jnovy@redhat.com> - 2:2.0.0-1
+- update to the latest upstream release
+- add -tests subpackage
+- Resolves: RHEL-187027
 
 * Fri Nov 14 2025 Jindrich Novy <jnovy@redhat.com> - 2:1.17.0-1
 - update to https://github.com/containers/aardvark-dns/releases/tag/v1.17.0
